@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Banany BIO",
+    "price": {
+      "main": 3,
+      "fractional": 49
+    },
+    "image": "/assets/images/banana.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mleko 3.2%",
+    "price": {
+      "main": 2,
+      "fractional": 89
+    },
+    "image": "/assets/images/milk.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Chleb Żytni",
+    "price": {
+      "main": 4,
+      "fractional": 15
+    },
+    "image": "/assets/images/bread.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Jaja 6 sztuk",
+    "price": {
+      "main": 6,
+      "fractional": 99
+    },
+    "image": "/assets/images/eggs.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Łosoś wędzony",
+    "price": {
+      "main": 5,
+      "fractional": 20
+    },
+    "image": "/assets/images/salmon.jpg"
+  }
+]
