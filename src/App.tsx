@@ -3,7 +3,7 @@ import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 import OrderSummary from './components/OrderSummary';
 import OrderConfirmation from './components/OrderConfirmation';
-import './styles.css';
+
 
 function App() {
   return (
