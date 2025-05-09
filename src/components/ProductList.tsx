@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Product, CartItem } from '../types';
 import productsData from '../data/products.json';
 
-
 const basePath = process.env.PUBLIC_URL || '';
 
 const ProductList = () => {
@@ -16,7 +15,6 @@ const ProductList = () => {
   const cartIconRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
-    
     const updatedProducts = productsData.map((product) => ({
       ...product,
       image: `${basePath}${product.image}`,
@@ -41,7 +39,6 @@ const ProductList = () => {
       return [...prevCart, { product, quantity: 1 }];
     });
 
-   
     if (cartIconRef.current) {
       cartIconRef.current.classList.add('pulse');
       setTimeout(() => {
