@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CartItem } from '../types';
 
+const basePath = process.env.PUBLIC_URL || '';
+
 const Cart = () => {
   const [cart, setCart] = useState<CartItem[]>(() => {
     const savedCart = localStorage.getItem('cart');
@@ -34,7 +36,7 @@ const Cart = () => {
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>, productName: string) => {
     console.error(`Failed to load image for ${productName}: ${e.currentTarget.src}`);
-    e.currentTarget.src = '/assets/images/placeholder.jpg';
+    e.currentTarget.src = `${basePath}/assets/images/placeholder.jpg`;
   };
 
   return (
@@ -51,7 +53,7 @@ const Cart = () => {
             {cart.map((item) => (
               <div key={item.product.id} className="cart-item">
                 <img
-                  src={item.product.image}
+                  src={`${basePath}${item.product.image}`}
                   alt={item.product.name}
                   onError={(e) => handleImageError(e, item.product.name)}
                 />
@@ -89,7 +91,7 @@ const Cart = () => {
             ))}
             <p className="cart-total">Całkowity koszt: {getTotal()} PLN</p>
           </div>
-          <Link to="/order-summary" className="button btn-blue">
+          <Link to="order-summary" className="button btn-blue">
             Przejdź do podsumowania
           </Link>
         </>

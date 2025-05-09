@@ -4,6 +4,7 @@ import { Product, CartItem } from '../types';
 import productsData from '../data/products.json';
 
 
+const basePath = process.env.PUBLIC_URL || '';
 
 const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -15,7 +16,12 @@ const ProductList = () => {
   const cartIconRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
-    setProducts(productsData);
+    
+    const updatedProducts = productsData.map((product) => ({
+      ...product,
+      image: `${basePath}${product.image}`,
+    }));
+    setProducts(updatedProducts);
   }, []);
 
   useEffect(() => {
@@ -35,7 +41,7 @@ const ProductList = () => {
       return [...prevCart, { product, quantity: 1 }];
     });
 
-    
+   
     if (cartIconRef.current) {
       cartIconRef.current.classList.add('pulse');
       setTimeout(() => {
@@ -55,13 +61,13 @@ const ProductList = () => {
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>, productName: string) => {
     console.error(`Failed to load image for ${productName}: ${e.currentTarget.src}`);
-    e.currentTarget.src = '/assets/images/placeholder.jpg';
+    e.currentTarget.src = `${basePath}/assets/images/placeholder.jpg`;
   };
 
   return (
     <div className="container">
       <h1>Lista Produktów</h1>
-      <Link to="/cart" className="cart-icon" ref={cartIconRef}>
+      <Link to="cart" className="cart-icon" ref={cartIconRef}>
         <i className="fas fa-shopping-cart"></i>
         {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
       </Link>
