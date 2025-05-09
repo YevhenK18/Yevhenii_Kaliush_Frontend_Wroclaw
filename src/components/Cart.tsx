@@ -9,7 +9,6 @@ const Cart = () => {
     const savedCart = localStorage.getItem('cart');
     if (!savedCart) return [];
     const parsedCart = JSON.parse(savedCart);
-    // Удаляем basePath из путей, если он уже есть, и добавляем корректный
     return parsedCart.map((item: CartItem) => ({
       ...item,
       product: {
