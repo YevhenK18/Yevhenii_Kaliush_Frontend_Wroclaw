@@ -31,7 +31,7 @@ This is a simple e-commerce frontend application built with **React** using **Cr
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/yevhenii_kaliush_frontend_wroclaw.git
+   git clone https://github.com/YevhenK18/yevhenii_kaliush_frontend_wroclaw.git
    cd yevhenii_kaliush_frontend_wroclaw
    ```
 2. Install dependencies:
