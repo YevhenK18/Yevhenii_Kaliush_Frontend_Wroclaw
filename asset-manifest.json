@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Yevhenii_Kaliush_Frontend_Wroclaw/static/css/main.06bf9aca.css",
+    "main.js": "/Yevhenii_Kaliush_Frontend_Wroclaw/static/js/main.8149c7f4.js",
+    "index.html": "/Yevhenii_Kaliush_Frontend_Wroclaw/index.html",
+    "main.06bf9aca.css.map": "/Yevhenii_Kaliush_Frontend_Wroclaw/static/css/main.06bf9aca.css.map",
+    "main.8149c7f4.js.map": "/Yevhenii_Kaliush_Frontend_Wroclaw/static/js/main.8149c7f4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06bf9aca.css",
+    "static/js/main.8149c7f4.js"
+  ]
+}
