@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-     <html lang="en">
-       <head>
-         <meta charset="utf-8" />
-         <meta name="viewport" content="width=device-width, initial-scale=1" />
-         <title>React App</title>
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-       </head>
-       <body>
-         <div id="root"></div>
-       </body>
-     </html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="E-commerce frontend application"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Yevhenii Kaliush Frontend Wrocław</title>
+    <script>
+      const basePath = '/Yevhenii_Kaliush_Frontend_Wroclaw';
+      if (window.location.pathname !== basePath && !window.location.pathname.startsWith(basePath + '/')) {
+        window.location.replace(basePath + window.location.pathname);
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
